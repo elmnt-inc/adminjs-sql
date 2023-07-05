@@ -10,7 +10,7 @@ const pgArrayAggToArray = (agg: string) => agg.replace(/{/g, '').replace(/}/g, '
 const getColumnType = (dbType: string): PropertyType => {
   switch (dbType) {
   case 'uuid': return 'uuid';
-  case 'bigint':
+  case 'bigint': return 'string';
   case 'int8':
   case 'bigserial':
   case 'serial8':
